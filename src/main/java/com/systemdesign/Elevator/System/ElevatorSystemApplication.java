@@ -21,6 +21,7 @@ public class ElevatorSystemApplication {
 
         // User inside elevator presses floor 9
         ElevatorCar elevator = building.getElevators().get(0);
+        elevator.getPanel().getEmergencyButton().setElevatorCar(elevator);
         elevator.addRequest(9);
         elevator.move();
 
