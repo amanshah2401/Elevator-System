@@ -10,6 +10,11 @@ public class ElevatorCar {
     private int id;
     private ElevatorState state;
     private int currentFloor;
+
+    public Direction getDirection() {
+        return direction;
+    }
+
     private Direction direction;
     private Door door;
     private ElevatorPanel panel;
@@ -75,6 +80,15 @@ public class ElevatorCar {
 
     public Display getDisplay() {
         return display;
+    }
+    public void setElevatorState(ElevatorState state) {
+        this.state = state;
+    }
+    public ElevatorState getElevatorState() {
+        return state;
+    }
+    public void clearAllRequests(){
+        this.requests = new PriorityQueue<>();
     }
 }
 

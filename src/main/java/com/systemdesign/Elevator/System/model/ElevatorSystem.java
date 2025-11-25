@@ -15,7 +15,7 @@ public class ElevatorSystem {
         System.out.println("Hall call from floor " + floor + " going " + direction);
 
         ElevatorCar best =
-                dispatcher.findBestElevator(floor, building.getElevators());
+                dispatcher.findBestElevator(floor, direction,building.getElevators());
 
         best.addRequest(floor);
         best.move();
